@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: 0 0% 100%;
+  --color-foreground: 240 10% 3.9%;
+  --color-card: 0 0% 100%;
+  --color-card-foreground: 240 10% 3.9%;
+  --color-popover: 0 0% 100%;
+  --color-popover-foreground: 240 10% 3.9%;
+  --color-primary: 240 5.9% 10%;
+  --color-primary-foreground: 0 0% 98%;
+  --color-secondary: 240 4.8% 95.9%;
+  --color-secondary-foreground: 240 5.9% 10%;
+  --color-muted: 240 4.8% 95.9%;
+  --color-muted-foreground: 240 3.8% 46.1%;
+  --color-accent: 240 4.8% 95.9%;
+  --color-accent-foreground: 240 5.9% 10%;
+  --color-destructive: 0 84.2% 60.2%;
+  --color-destructive-foreground: 0 0% 98%;
+  --color-border: 240 5.9% 90%;
+  --color-input: 240 5.9% 90%;
+  --color-ring: 240 5.9% 10%;
+  --color-chart-1: 12 76% 61%;
+  --color-chart-2: 173 58% 39%;
+  --color-chart-3: 197 37% 24%;
+  --color-chart-4: 43 74% 66%;
+  --color-chart-5: 27 87% 67%;
+  --radius: 0.5rem;
+}
+
+* {
+  border-color: hsl(var(--color-border));
+  outline-color: hsl(var(--color-ring) / 0.5);
+}
+
+body {
+  background-color: hsl(var(--color-background));
+  color: hsl(var(--color-foreground));
+}
+
+.gradient {
+  background: linear-gradient(to bottom right, #2563eb, #9333ea);
+}
+
+.gradient-title {
+  background: linear-gradient(to bottom right, #01143d, #9333ea);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.hero-image-wrapper {
+  perspective: 800px;
+}
+
+.hero-image {
+  transform: rotateX(15deg) scale(1);
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+}
+
+.hero-image.scrolled {
+  transform: rotateX(0deg) scale(1) translateY(40px);
+}
+
+/* Add to your global CSS or component styles */
+.custom-checkbox[data-state="checked"] {
+  background-color: black !important;
+  border-color: black !important;
+  color: white !important;
+}
+
+.custom-checkbox[data-state="checked"] svg {
+  color: white !important;
+}
+
+/* Add to your globals.css or wherever your CSS variables are defined */
+:root {
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+}
+
+.dark {
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientMove 3s ease infinite;
+}
