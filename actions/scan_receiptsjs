@@ -1,0 +1,11 @@
+import { extractTextFromImage } from "@/lib/ocr";
+import { parseReceiptText } from "@/lib/receipt-parser";
+
+export async function processReceipt(imageFile) {
+
+  const text = await extractTextFromImage(imageFile);
+
+  const receiptData = parseReceiptText(text);
+
+  return receiptData;
+}

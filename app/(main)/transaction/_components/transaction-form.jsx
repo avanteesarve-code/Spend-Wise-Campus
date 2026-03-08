@@ -267,20 +267,30 @@ export function AddTransactionForm({
 			</div>
 
 			{/* Recurring Toggle */}
-			<div className="flex flex-row items-center justify-between rounded-lg border p-4">
-				<div className="space-y-0.5">
-					<label className="text-base font-medium">Recurring Transaction</label>
-					<div className="text-sm text-muted-foreground">
-						Set up a recurring schedule for this transaction
-					</div>
-				</div>
-				<Switch 
-  className="data-[state=checked]:bg-violet-600 data-[state=unchecked]:bg-gray-300"
-  
-					checked={isRecurring}
-					onCheckedChange={(checked) => setValue("isRecurring", checked)}
-				/>
-			</div>
+<div className="flex flex-row items-center justify-between rounded-lg border p-4">
+
+  <div className="space-y-0.5">
+    <label className="text-base font-medium">Recurring Transaction</label>
+    <div className="text-sm text-muted-foreground">
+      Set up a recurring schedule for this transaction
+    </div>
+  </div>
+
+  <div className="flex items-center gap-3">
+    <Switch
+      checked={isRecurring}
+      onCheckedChange={(checked) =>
+        setValue("isRecurring", checked, { shouldValidate: true })
+      }
+      className="data-[state=checked]:bg-violet-600"
+    />
+
+    <span className="text-sm font-semibold w-10 text-center">
+      {isRecurring ? "ON" : "OFF"}
+    </span>
+  </div>
+
+</div>
 
 			{/* Recurring Interval */}
 			{isRecurring && (
