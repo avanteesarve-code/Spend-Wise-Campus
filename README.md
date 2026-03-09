@@ -179,7 +179,7 @@ Steps:
 
 ## 👩‍💻 Author
 
-**Avantee Sarve**
+Avantee Sarve
 ---
 
 ## ⭐ Support
