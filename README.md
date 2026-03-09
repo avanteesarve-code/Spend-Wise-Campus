@@ -1,36 +1,187 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💸 Spend Wise Campus
 
-## Getting Started
+AI-powered expense tracking platform designed for students to **manage money smarter, track spending, and gain financial insights**.
 
-First, run the development server:
+Built with **Next.js, Prisma, Clerk Authentication, and AI-powered receipt scanning**, Spend Wise Campus helps students stay financially aware with a modern fintech-style dashboard.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Live Demo
+
+🔗 https://spend-wise-campus-g4gm.vercel.app/
+
+---
+
+## ✨ Features
+
+### 🔐 Secure Authentication
+
+* User authentication powered by **Clerk**
+* Secure login and user session management
+* Protected routes for dashboard and transactions
+
+### 📊 Smart Expense Dashboard
+
+* Track all expenses and income in one place
+* View **recent transactions**
+* Interactive **expense charts**
+
+### 💳 Account Management
+
+* Create multiple financial accounts
+* Set default account for transactions
+* Monitor balances in real time
+
+### 🧾 AI Receipt Scanner
+
+* Upload receipt images
+* Extract text using **Tesseract.js OCR**
+* Automatically populate transaction details
+
+Supports scanning:
+
+* Physical receipts
+* Google Pay screenshots
+* PhonePe screenshots
+* Paytm screenshots
+
+### 📈 Expense Insights
+
+* Monthly expense breakdown
+* Visual charts using **Recharts**
+
+### ⚡ Security & Protection
+
+* Request protection using **Arcjet**
+* Rate limiting and bot detection
+* Secure server actions
+
+---
+
+## 🛠 Tech Stack
+
+**Frontend**
+
+* Next.js 15
+* React 19
+* Tailwind CSS
+* Shadcn UI
+* Recharts
+
+**Backend**
+
+* Next.js Server Actions
+* Prisma ORM
+* PostgreSQL
+
+**Authentication**
+
+* Clerk
+
+**Security**
+
+* Arcjet
+
+**AI / OCR**
+
+* Tesseract.js
+
+---
+
+## 📂 Project Structure
+
+```
+app/
+ ├─ dashboard
+ ├─ account
+ ├─ transaction
+ └─ api
+
+actions/
+ ├─ accounts.js
+ ├─ dashboard.js
+ ├─ transaction.js
+
+components/
+ ├─ header.jsx
+ ├─ receipt-scanner.jsx
+ ├─ transaction-form.jsx
+
+lib/
+ ├─ prisma.js
+ ├─ receipt-parser.js
+ ├─ ocr.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ⚙️ Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env` file in the root:
 
-## Learn More
+```
+DATABASE_URL=
 
-To learn more about Next.js, take a look at the following resources:
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ARCJET_KEY=
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🧪 Local Development
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Clone the repository
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+git clone https://github.com/avanteesarve-code/spend-wise-campus.git
+```
+
+Install dependencies
+
+```
+npm install
+```
+
+Generate Prisma client
+
+```
+npx prisma generate
+```
+
+Run development server
+
+```
+npm run dev
+```
+
+App will run on:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🚀 Deployment
+
+This project is deployed using **Vercel**.
+
+Steps:
+
+1. Push project to GitHub
+2. Import repository in **Vercel**
+3. Add environment variables
+4. Deploy
+
+---
+
+## 👩‍💻 Author
+
+**Avantee Sarve**
+---
+
+## ⭐ Support
+
+If you like this project, please consider giving it a **star ⭐ on GitHub**.
